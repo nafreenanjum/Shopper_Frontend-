@@ -1,0 +1,106 @@
+.hero {
+    height: 100vh; /* Full viewport height */
+    background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
+    display: flex; /* Flex container for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between left and right sections */
+}
+
+
+.hero-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 180px;
+    padding-bottom:500px;
+}
+
+.hero-left h2 {
+    color: #090909;
+    font-size: 50px;
+    font-weight: 500;
+    white-space: nowrap;
+    padding-top:200px;
+    position:relative;
+    right: 30px;
+    
+}
+
+.hero-left p {
+    color: #171717;
+    font-size: 100px;
+    font-weight: 700;
+    position: relative;
+    right:40px;
+    
+}
+
+.hero-hand-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero-hand-icon p {
+    font-size: 80px;
+    position: relative;
+    right:520px;
+    bottom:80px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+.hero-hand-icon img {
+    width: 100px;
+    position: relative;
+    right:500px;
+    bottom:80px;
+}
+
+.hero-latest-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 970px;
+    height: 50px;
+    border-radius: 30px;
+    margin-top: 30px;
+    background: #ff4141;
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+    position :relative;
+    right:1200px;
+    top:250px;
+    white-space: nowrap;
+
+}
+
+.hero-right {
+    display: flex;
+    flex: 1; /* Adjust this based on your layout needs */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    height: 100%; /* Ensure it takes up full height if needed */
+}
+
+
+.hero-right img {
+    width: 650px; /* Image width */
+    height: 750px; /* Maintain aspect ratio */
+    display: block; /* Remove any inline spacing */
+    position:relative;
+    right:700px;
+}
+
+.heading p{
+    position:relative;
+    
+    right:780px;
+    white-space: nowrap;
+    top:60px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 80px;
+}
