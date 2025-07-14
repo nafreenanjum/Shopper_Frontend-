@@ -11,6 +11,8 @@ import Footer from "./COMPONENT/Footer/Footer";
 import banner_mens from './COMPONENT/Assets/banner_mens.png';
 import banner_women from './COMPONENT/Assets/banner_women.png';
 import banner_kids from './COMPONENT/Assets/banner_kids.png';
+import ChatBot from './COMPONENT/ChatBot/ChatBot';
+
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
           <Route path="/login" element={<LoginSignup />} />
         </Routes>
         <Footer />
+        <ChatBot /> 
+
       </BrowserRouter>
     </ShopContextProvider>
   );

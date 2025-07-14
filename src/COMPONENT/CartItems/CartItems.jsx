@@ -3,6 +3,8 @@ import './CartItems.css';
 import { useContext } from 'react';
 import { ShopContext } from '../../CONTENT/ShopContext';
 import remove_icon from '../Assets/cart_cross_icon.png';
+import StripeCheckoutButton from '../StripeCheckoutButton';
+
 
 export default function CartItems() {
     const { getTotalCartAmount,all_product, cartItems, removeFromCart } = useContext(ShopContext);
@@ -41,26 +43,30 @@ export default function CartItems() {
                 return null; // Explicitly return null when condition is not met
             })}
             <div className='cartitems-down'>
-                <div className="cartitem-total">
-                    <h1>cart Totals</h1>
-                    <div>
-                        <div className="cartitems-total-items">
-                            <p>Subtotals</p>
-                            <p>Rs{getTotalCartAmount()}</p>
-                        </div>
-                        <hr/>
-                        <div className='cartitems-total-items'>
-                            <p>Shipping Fee</p>
-                            <p>Free</p>
-                        </div>
-                        <hr/>
-                        <div className='cartitems-total-items'>
-                            <h3>Total</h3>
-                            <h3>Rs{getTotalCartAmount()}</h3>
-                        </div>
-                    </div>
-                    <button>PROCEED TO CHECKOUT</button>
-                </div>
+  <div className="cartitem-total">
+    <h1>cart Totals</h1>
+    <div>
+      <div className="cartitems-total-items">
+        <p>Subtotals</p>
+        <p>Rs{getTotalCartAmount()}</p>
+      </div>
+      <hr/>
+      <div className='cartitems-total-items'>
+        <p>Shipping Fee</p>
+        <p>Free</p>
+      </div>
+      <hr/>
+      <div className='cartitems-total-items'>
+        <h3>Total</h3>
+        <h3>Rs{getTotalCartAmount()}</h3>
+      </div>
+    </div>
+
+    {/* ✅ Stripe Button */}
+    <StripeCheckoutButton cartTotal={getTotalCartAmount()} />
+
+  </div>
+
                 <div className='cartitems-promocode'>
                     <p>If you have a promo code ,Enter it here</p>
                     <div className='cartitems-promobox'>
